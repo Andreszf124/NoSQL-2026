@@ -1,0 +1,29 @@
+Creación de Usuarios Admin y Cliente
+
+Administrador:
+db.createUser({
+    user: "administrador",
+    pwd: "admin123",
+    roles: [
+        {
+            role: "dbOwner",
+            db: "agencia_turismo_db"
+        }
+    ]
+})
+
+
+
+Cliente:
+use agencia_turismo_db
+
+db.createUser({
+    user: "cliente",
+    pwd: "cliente123",
+    roles: [
+        {
+            role: "read",
+            db: "agencia_turismo_db"
+        }
+    ]
+})

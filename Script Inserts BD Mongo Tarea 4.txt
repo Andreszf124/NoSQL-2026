@@ -1,0 +1,120 @@
+Script Inserts BD Mongo
+
+Inserts
+
+db.clientes.insertOne({nombre: "Carlos", apellido: "Garcia", email: "carlos1@mail.com", telefono: "88888888", pais: "Costa Rica", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Maria", apellido: "Rodriguez", email: "maria2@mail.com", telefono: "88888889", pais: "USA", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Jose", apellido: "Martinez", email: "jose3@mail.com", telefono: "88888890", pais: "Mexico", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Ana", apellido: "Lopez", email: "ana4@mail.com", telefono: "88888891", pais: "España", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Luis", apellido: "Perez", email: "luis5@mail.com", telefono: "88888892", pais: "Colombia", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Laura", apellido: "Sanchez", email: "laura6@mail.com", telefono: "88888893", pais: "Argentina", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Pedro", apellido: "Ramirez", email: "pedro7@mail.com", telefono: "88888894", pais: "Chile", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Sofia", apellido: "Torres", email: "sofia8@mail.com", telefono: "88888895", pais: "Peru", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Juan", apellido: "Flores", email: "juan9@mail.com", telefono: "88888896", pais: "Costa Rica", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Elena", apellido: "Mora", email: "elena10@mail.com", telefono: "88888897", pais: "USA", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Diego", apellido: "Vega", email: "diego11@mail.com", telefono: "88888898", pais: "Mexico", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Valeria", apellido: "Cruz", email: "valeria12@mail.com", telefono: "88888899", pais: "Colombia", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Andres", apellido: "Ortiz", email: "andres13@mail.com", telefono: "88888900", pais: "Costa Rica", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Camila", apellido: "Rojas", email: "camila14@mail.com", telefono: "88888901", pais: "España", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Fernando", apellido: "Diaz", email: "fernando15@mail.com", telefono: "88888902", pais: "Argentina", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Gabriela", apellido: "Mendoza", email: "gabriela16@mail.com", telefono: "88888903", pais: "Chile", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Ricardo", apellido: "Silva", email: "ricardo17@mail.com", telefono: "88888904", pais: "Peru", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Daniela", apellido: "Navarro", email: "daniela18@mail.com", telefono: "88888905", pais: "Mexico", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Pablo", apellido: "Gutierrez", email: "pablo19@mail.com", telefono: "88888906", pais: "Costa Rica", rol: "cliente", fecha_registro: "2026-07-20"});
+db.clientes.insertOne({nombre: "Andrea", apellido: "Molina", email: "andrea20@mail.com", telefono: "88888907", pais: "USA", rol: "cliente", fecha_registro: "2026-07-20"});
+
+
+
+db.paquetes.insertOne({nombre: "Paquete Guanacaste", destino: "Guanacaste", precio: 250.00, duracion: 3, descripcion: "Playas y sol en Guanacaste", actividades: ["Playa", "Snorkel", "Pesca"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete San Jose", destino: "San Jose", precio: 150.00, duracion: 2, descripcion: "Cultura y ciudad", actividades: ["Museos", "Teatros", "Gastronomia"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Limon", destino: "Limon", precio: 300.00, duracion: 4, descripcion: "Caribe costarricense", actividades: ["Playa", "Cultura Afro", "Gastronomia"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Puntarenas", destino: "Puntarenas", precio: 200.00, duracion: 3, descripcion: "Pacifico Central", actividades: ["Playa", "Navegacion", "Pesca"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Alajuela", destino: "Alajuela", precio: 180.00, duracion: 2, descripcion: "Volcanes y naturaleza", actividades: ["Volcan", "Senderismo", "Aves"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Cartago", destino: "Cartago", precio: 120.00, duracion: 2, descripcion: "Historia y montaña", actividades: ["Historia", "Montaña", "Cultura"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Heredia", destino: "Heredia", precio: 130.00, duracion: 2, descripcion: "Cafe y naturaleza", actividades: ["Cafe", "Naturaleza", "Senderismo"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Corcovado", destino: "Puntarenas", precio: 450.00, duracion: 5, descripcion: "Aventura en Corcovado", actividades: ["Selva", "Animales", "Senderismo"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Tortuguero", destino: "Limon", precio: 350.00, duracion: 4, descripcion: "Tortugas y canales", actividades: ["Tortugas", "Canales", "Naturaleza"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Monteverde", destino: "Alajuela", precio: 280.00, duracion: 3, descripcion: "Bosque nuboso", actividades: ["Bosque", "Canopy", "Aves"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Jaco", destino: "Puntarenas", precio: 220.00, duracion: 3, descripcion: "Surf y vida nocturna", actividades: ["Surf", "Playa", "Vida Nocturna"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Dominical", destino: "Puntarenas", precio: 190.00, duracion: 3, descripcion: "Relajacion y naturaleza", actividades: ["Playa", "Naturaleza", "Senderismo"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Uvita", destino: "Puntarenas", precio: 210.00, duracion: 3, descripcion: "Ballenas y playas", actividades: ["Ballenas", "Playa", "Snorkel"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Sarapiqui", destino: "Heredia", precio: 160.00, duracion: 2, descripcion: "Rios y naturaleza", actividades: ["Rafting", "Naturaleza", "Aves"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Turrialba", destino: "Cartago", precio: 140.00, duracion: 2, descripcion: "Montaña y volcan", actividades: ["Volcan", "Senderismo", "Montaña"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Orosi", destino: "Cartago", precio: 110.00, duracion: 2, descripcion: "Historia y naturaleza", actividades: ["Historia", "Naturaleza", "Laguna"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Santa Teresa", destino: "Puntarenas", precio: 260.00, duracion: 3, descripcion: "Surf y yoga", actividades: ["Surf", "Yoga", "Playa"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Mal Pais", destino: "Puntarenas", precio: 240.00, duracion: 3, descripcion: "Relajacion y surf", actividades: ["Surf", "Playa", "Relajacion"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Nosara", destino: "Guanacaste", precio: 270.00, duracion: 3, descripcion: "Yoga y surf", actividades: ["Surf", "Yoga", "Playa"], activo: true});
+db.paquetes.insertOne({nombre: "Paquete Samara", destino: "Guanacaste", precio: 230.00, duracion: 3, descripcion: "Playa y descanso", actividades: ["Playa", "Snorkel", "Descanso"], activo: true});
+
+
+
+
+db.guias.insertOne({nombre: "Andres Castro", especialidad: "Aventura", idiomas: ["Español", "Ingles"], telefono: "88888898", email: "andres@mail.com", experiencia: 5, disponible: true});
+db.guias.insertOne({nombre: "Marta Jimenez", especialidad: "Cultural", idiomas: ["Español", "Frances"], telefono: "88888899", email: "marta@mail.com", experiencia: 8, disponible: true});
+db.guias.insertOne({nombre: "Luis Vargas", especialidad: "Naturaleza", idiomas: ["Español", "Ingles", "Aleman"], telefono: "88888900", email: "luisv@mail.com", experiencia: 3, disponible: false});
+db.guias.insertOne({nombre: "Ana Flores", especialidad: "Historico", idiomas: ["Español", "Ingles"], telefono: "88888901", email: "anaflores@mail.com", experiencia: 6, disponible: true});
+db.guias.insertOne({nombre: "Carlos Rojas", especialidad: "Gastronomico", idiomas: ["Español"], telefono: "88888902", email: "carlosr@mail.com", experiencia: 4, disponible: true});
+db.guias.insertOne({nombre: "Laura Mora", especialidad: "Aventura", idiomas: ["Español", "Ingles", "Portugues"], telefono: "88888903", email: "lauram@mail.com", experiencia: 7, disponible: true});
+db.guias.insertOne({nombre: "Jose Cordero", especialidad: "Cultural", idiomas: ["Español", "Ingles"], telefono: "88888904", email: "josec@mail.com", experiencia: 2, disponible: true});
+db.guias.insertOne({nombre: "Elena Arroyo", especialidad: "Naturaleza", idiomas: ["Español", "Frances", "Ingles"], telefono: "88888905", email: "elenaa@mail.com", experiencia: 9, disponible: true});
+db.guias.insertOne({nombre: "Marco Salas", especialidad: "Historico", idiomas: ["Español"], telefono: "88888906", email: "marcos@mail.com", experiencia: 4, disponible: false});
+db.guias.insertOne({nombre: "Paula Diaz", especialidad: "Gastronomico", idiomas: ["Español", "Ingles", "Italiano"], telefono: "88888907", email: "paulad@mail.com", experiencia: 6, disponible: true});
+db.guias.insertOne({nombre: "Raul Castro", especialidad: "Aventura", idiomas: ["Español", "Ingles"], telefono: "88888908", email: "raulc@mail.com", experiencia: 5, disponible: true});
+db.guias.insertOne({nombre: "Carmen Quesada", especialidad: "Cultural", idiomas: ["Español", "Ingles", "Frances"], telefono: "88888909", email: "carmenq@mail.com", experiencia: 7, disponible: true});
+db.guias.insertOne({nombre: "David Pineda", especialidad: "Naturaleza", idiomas: ["Español", "Ingles"], telefono: "88888910", email: "davidp@mail.com", experiencia: 4, disponible: true});
+db.guias.insertOne({nombre: "Monica Gamboa", especialidad: "Historico", idiomas: ["Español"], telefono: "88888911", email: "monicag@mail.com", experiencia: 3, disponible: true});
+db.guias.insertOne({nombre: "Fernando Urena", especialidad: "Gastronomico", idiomas: ["Español", "Ingles"], telefono: "88888912", email: "fernandou@mail.com", experiencia: 8, disponible: true});
+db.guias.insertOne({nombre: "Lorena Hidalgo", especialidad: "Aventura", idiomas: ["Español", "Ingles", "Aleman"], telefono: "88888913", email: "lorenah@mail.com", experiencia: 6, disponible: true});
+db.guias.insertOne({nombre: "Gabriel Solis", especialidad: "Cultural", idiomas: ["Español", "Ingles"], telefono: "88888914", email: "gabriels@mail.com", experiencia: 5, disponible: false});
+db.guias.insertOne({nombre: "Patricia Fallas", especialidad: "Naturaleza", idiomas: ["Español", "Frances"], telefono: "88888915", email: "patriciaf@mail.com", experiencia: 7, disponible: true});
+db.guias.insertOne({nombre: "Miguel Arroyo", especialidad: "Historico", idiomas: ["Español", "Ingles"], telefono: "88888916", email: "miguela@mail.com", experiencia: 4, disponible: true});
+db.guias.insertOne({nombre: "Rosa Aguilar", especialidad: "Gastronomico", idiomas: ["Español", "Ingles", "Italiano"], telefono: "88888917", email: "rosaa@mail.com", experiencia: 6, disponible: true});
+
+
+
+
+db.destinos.insertOne({nombre: "Tamarindo", region: "Pacifico Norte", clima: "Tropical", atracciones: ["Playas", "Surf", "Vida Nocturna"], popularidad: 9});
+db.destinos.insertOne({nombre: "Arenal", region: "Valle Central", clima: "Lluvioso", atracciones: ["Volcan", "Aguas Termales", "Senderismo"], popularidad: 10});
+db.destinos.insertOne({nombre: "Manuel Antonio", region: "Pacifico Central", clima: "Tropical", atracciones: ["Playa", "Parque Nacional", "Animales"], popularidad: 9});
+db.destinos.insertOne({nombre: "Puerto Viejo", region: "Caribe", clima: "Lluvioso", atracciones: ["Playa", "Cultura Afro", "Buceo"], popularidad: 8});
+db.destinos.insertOne({nombre: "Monteverde", region: "Valle Central", clima: "Fresco", atracciones: ["Bosque Nuboso", "Canopy", "Aves"], popularidad: 9});
+db.destinos.insertOne({nombre: "Nicoya", region: "Pacifico Norte", clima: "Tropical", atracciones: ["Playas", "Surf", "Gastronomia"], popularidad: 7});
+db.destinos.insertOne({nombre: "Cartago", region: "Valle Central", clima: "Templado", atracciones: ["Historia", "Montaña", "Iglesias"], popularidad: 6});
+db.destinos.insertOne({nombre: "Guanacaste", region: "Pacifico Norte", clima: "Seco", atracciones: ["Playas", "Rodeos", "Gastronomia"], popularidad: 8});
+db.destinos.insertOne({nombre: "Corcovado", region: "Pacifico Sur", clima: "Lluvioso", atracciones: ["Selva", "Animales", "Senderismo"], popularidad: 9});
+db.destinos.insertOne({nombre: "Tortuguero", region: "Caribe", clima: "Lluvioso", atracciones: ["Canales", "Tortugas", "Naturaleza"], popularidad: 8});
+db.destinos.insertOne({nombre: "Santa Teresa", region: "Pacifico Central", clima: "Tropical", atracciones: ["Playas", "Surf", "Yoga"], popularidad: 8});
+db.destinos.insertOne({nombre: "Uvita", region: "Pacifico Sur", clima: "Tropical", atracciones: ["Playa", "Ballenas", "Senderismo"], popularidad: 7});
+db.destinos.insertOne({nombre: "Sarapiqui", region: "Valle Central", clima: "Lluvioso", atracciones: ["Naturaleza", "Aves", "Rios"], popularidad: 6});
+db.destinos.insertOne({nombre: "Puntarenas", region: "Pacifico Central", clima: "Tropical", atracciones: ["Playa", "Mercado", "Islas"], popularidad: 6});
+db.destinos.insertOne({nombre: "San Jose", region: "Valle Central", clima: "Templado", atracciones: ["Museos", "Teatros", "Gastronomia"], popularidad: 5});
+db.destinos.insertOne({nombre: "Heredia", region: "Valle Central", clima: "Templado", atracciones: ["Cafe", "Montaña", "Cultura"], popularidad: 5});
+db.destinos.insertOne({nombre: "Alajuela", region: "Valle Central", clima: "Templado", atracciones: ["Volcan", "Naturaleza", "Cafe"], popularidad: 6});
+db.destinos.insertOne({nombre: "Limon", region: "Caribe", clima: "Lluvioso", atracciones: ["Playa", "Cultura", "Cocina Caribena"], popularidad: 7});
+db.destinos.insertOne({nombre: "Osa", region: "Pacifico Sur", clima: "Lluvioso", atracciones: ["Selva", "Animales", "Playas"], popularidad: 8});
+db.destinos.insertOne({nombre: "Mal Pais", region: "Pacifico Central", clima: "Tropical", atracciones: ["Playas", "Surf", "Relajacion"], popularidad: 7});
+
+
+
+db.reservaciones.insertMany([
+    {cliente_id: clientes[0]._id, paquete_id: paquetes[0]._id, fecha_viaje: "2026-08-15", personas: 2, costo_total: 500.00, estado: "Confirmada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[1]._id, paquete_id: paquetes[1]._id, fecha_viaje: "2026-08-20", personas: 1, costo_total: 150.00, estado: "Pendiente", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[2]._id, paquete_id: paquetes[2]._id, fecha_viaje: "2026-09-01", personas: 3, costo_total: 900.00, estado: "Confirmada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[3]._id, paquete_id: paquetes[3]._id, fecha_viaje: "2026-09-10", personas: 2, costo_total: 400.00, estado: "Pendiente", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[4]._id, paquete_id: paquetes[4]._id, fecha_viaje: "2026-09-15", personas: 4, costo_total: 720.00, estado: "Cancelada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[5]._id, paquete_id: paquetes[5]._id, fecha_viaje: "2026-09-20", personas: 2, costo_total: 240.00, estado: "Confirmada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[6]._id, paquete_id: paquetes[6]._id, fecha_viaje: "2026-09-25", personas: 1, costo_total: 130.00, estado: "Pendiente", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[7]._id, paquete_id: paquetes[7]._id, fecha_viaje: "2026-10-01", personas: 3, costo_total: 1350.00, estado: "Confirmada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[8]._id, paquete_id: paquetes[8]._id, fecha_viaje: "2026-10-05", personas: 2, costo_total: 700.00, estado: "Pendiente", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[9]._id, paquete_id: paquetes[9]._id, fecha_viaje: "2026-10-10", personas: 4, costo_total: 1120.00, estado: "Confirmada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[10]._id, paquete_id: paquetes[10]._id, fecha_viaje: "2026-10-15", personas: 2, costo_total: 440.00, estado: "Cancelada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[11]._id, paquete_id: paquetes[11]._id, fecha_viaje: "2026-10-20", personas: 3, costo_total: 570.00, estado: "Pendiente", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[12]._id, paquete_id: paquetes[12]._id, fecha_viaje: "2026-10-25", personas: 1, costo_total: 210.00, estado: "Confirmada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[13]._id, paquete_id: paquetes[13]._id, fecha_viaje: "2026-11-01", personas: 2, costo_total: 320.00, estado: "Pendiente", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[14]._id, paquete_id: paquetes[14]._id, fecha_viaje: "2026-11-05", personas: 3, costo_total: 420.00, estado: "Confirmada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[15]._id, paquete_id: paquetes[15]._id, fecha_viaje: "2026-11-10", personas: 2, costo_total: 220.00, estado: "Cancelada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[16]._id, paquete_id: paquetes[16]._id, fecha_viaje: "2026-11-15", personas: 1, costo_total: 260.00, estado: "Pendiente", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[17]._id, paquete_id: paquetes[17]._id, fecha_viaje: "2026-11-20", personas: 2, costo_total: 480.00, estado: "Confirmada", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[18]._id, paquete_id: paquetes[18]._id, fecha_viaje: "2026-11-25", personas: 3, costo_total: 810.00, estado: "Pendiente", fecha_reserva: "2026-07-20"},
+    {cliente_id: clientes[19]._id, paquete_id: paquetes[19]._id, fecha_viaje: "2026-12-01", personas: 2, costo_total: 460.00, estado: "Confirmada", fecha_reserva: "2026-07-20"}
+]);
