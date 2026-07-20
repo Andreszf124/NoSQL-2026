@@ -14,8 +14,21 @@ class Database:
     def __new__(cls):
         if cls._instance is None:
             cls._instance = super().__new__(cls)
-            cls._instance.client = MongoClient(Config.MONGO_URI)
-            cls._instance.db = cls._instance.client[Config.DB_NAME]
+            
+            # Usar autenticación explícita
+            uri = os.getenv('MONGO_URI')
+            print(f"🔗 Conectando a: {uri.replace('App123!', '****')}")
+            
+            cls._instance.client = MongoClient(uri)
+            cls._instance.db = cls._instance.client[os.getenv('DB_NAME')]
+            
+            # Probar conexión
+            try:
+                cls._instance.client.admin.command('ping')
+                print("✅ Conexión a MongoDB exitosa")
+            except Exception as e:
+                print(f"❌ Error de conexión: {e}")
+                
         return cls._instance
 
     def get_collection(self, name):
