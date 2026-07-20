@@ -1,0 +1,12 @@
+Script de Indices simple y compueso DB Mongo Tarea 4
+
+
+Simple:
+db.clientes.createIndex({ email: 1 })
+
+
+Compuesto:
+db.reservaciones.createIndex({
+    estado: 1,
+    fecha_viaje: 1
+})
