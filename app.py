@@ -8,14 +8,23 @@ app = Flask(__name__, static_folder='static')
 CORS(app)
 db = Database().db
 
+# =============================================
 # HELPERS
+# =============================================
 def convertir_id(doc):
     if doc:
         doc['_id'] = str(doc['_id'])
     return doc
 
+def es_admin(usuario):
+    # Verificar si el usuario es administrador
+    if not usuario:
+        return False
+    return usuario.get('rol') == 'admin'
 
+# =============================================
 # LOGIN
+# =============================================
 @app.route('/api/login', methods=['POST'])
 def login():
     data = request.json
@@ -36,8 +45,9 @@ def login():
     else:
         return jsonify({'success': False, 'message': 'Credenciales incorrectas'}), 401
 
-# 
+# =============================================
 # CLIENTES (CRUD)
+# =============================================
 @app.route('/api/clientes', methods=['GET'])
 def get_clientes():
     clientes = list(db.clientes.find())
@@ -70,9 +80,9 @@ def delete_cliente(id):
     db.clientes.delete_one({'_id': ObjectId(id)})
     return jsonify({'message': 'Eliminado'})
 
-
-# PAQUETES 
-
+# =============================================
+# PAQUETES (CRUD)
+# =============================================
 @app.route('/api/paquetes', methods=['GET'])
 def get_paquetes():
     paquetes = list(db.paquetes.find())
@@ -101,45 +111,44 @@ def update_paquete(id):
 def delete_paquete(id):
     db.paquetes.delete_one({'_id': ObjectId(id)})
     return jsonify({'message': 'Eliminado'})
-
-
-# RESERVACIONES 
-
+# =============================================
+# RESERVACIONES (CRUD)
+# =============================================
 @app.route('/api/reservaciones', methods=['GET'])
 def get_reservaciones():
-    reservaciones = list(db.reservaciones.find())
+    # Obtener el cliente_id desde los parámetros de la URL
+    cliente_id = request.args.get('cliente_id')
+    
+    if cliente_id:
+        # Filtrar reservaciones de un cliente específico
+        reservaciones = list(db.reservaciones.find({'cliente_id': cliente_id}))
+    else:
+        # Todas las reservaciones (solo admin)
+        reservaciones = list(db.reservaciones.find())
+    
     for r in reservaciones:
         r['_id'] = str(r['_id'])
+        if 'cliente_id' in r and r['cliente_id']:
+            r['cliente_id'] = str(r['cliente_id'])
+        if 'paquete_id' in r and r['paquete_id']:
+            r['paquete_id'] = str(r['paquete_id'])
     return jsonify(reservaciones)
-
-@app.route('/api/reservaciones/<id>', methods=['GET'])
-def get_reservacion(id):
-    reservacion = db.reservaciones.find_one({'_id': ObjectId(id)})
-    return jsonify(convertir_id(reservacion))
 
 @app.route('/api/reservaciones', methods=['POST'])
 def create_reservacion():
     data = request.json
+    
+    # Verificar si el cliente ya tiene una reservación
     existente = db.reservaciones.find_one({'cliente_id': data.get('cliente_id')})
     if existente:
         return jsonify({'error': 'El cliente ya tiene una reservación'}), 400
+    
     result = db.reservaciones.insert_one(data)
     return jsonify({'_id': str(result.inserted_id)}), 201
 
-@app.route('/api/reservaciones/<id>', methods=['PUT'])
-def update_reservacion(id):
-    data = request.json
-    db.reservaciones.update_one({'_id': ObjectId(id)}, {'$set': data})
-    return jsonify({'message': 'Actualizado'})
-
-@app.route('/api/reservaciones/<id>', methods=['DELETE'])
-def delete_reservacion(id):
-    db.reservaciones.delete_one({'_id': ObjectId(id)})
-    return jsonify({'message': 'Eliminado'})
-
-
-# GUIAS 
-
+# =============================================
+# GUIAS (CRUD)
+# =============================================
 @app.route('/api/guias', methods=['GET'])
 def get_guias():
     guias = list(db.guias.find())
@@ -169,9 +178,9 @@ def delete_guia(id):
     db.guias.delete_one({'_id': ObjectId(id)})
     return jsonify({'message': 'Eliminado'})
 
-
-# DESTINOS 
-
+# =============================================
+# DESTINOS (CRUD)
+# =============================================
 @app.route('/api/destinos', methods=['GET'])
 def get_destinos():
     destinos = list(db.destinos.find())
@@ -201,8 +210,9 @@ def delete_destino(id):
     db.destinos.delete_one({'_id': ObjectId(id)})
     return jsonify({'message': 'Eliminado'})
 
-
+# =============================================
 # FRONTEND
+# =============================================
 @app.route('/')
 def index():
     return send_from_directory('static', 'index.html')
